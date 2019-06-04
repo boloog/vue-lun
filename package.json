@@ -1,0 +1,23 @@
+{
+  "name": "vue-lun",
+  "version": "1.0.0",
+  "description": "UI 框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boloog/vue-lun.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "龙柏龙",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boloog/vue-lun/issues"
+  },
+  "homepage": "https://github.com/boloog/vue-lun#readme"
+}
