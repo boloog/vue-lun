@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/boloog/vue-lun/issues"
   },
-  "homepage": "https://github.com/boloog/vue-lun#readme"
+  "homepage": "https://github.com/boloog/vue-lun#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
