@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -22,18 +23,37 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
-        #app{
+
+        #app {
             margin: 30px;
         }
+
         body {
             font-size: var(--font-size);
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
         }
     </style>
 </head>
 <body>
 <div id="app">
-    <v-button></v-button>
+    <v-button icon="shezhi" icon-position="left">
+        Hello~
+    </v-button>
+    <v-button icon="shezhi" icon-position="right">
+        Hello~
+    </v-button>
+    <v-button>
+        Hello~
+    </v-button>
+    <v-button icon="shezhi">
+        Hello~
+    </v-button>
 </div>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1228750_wbqfylvdspr.js"></script>
 </body>
 </html>
