@@ -52,7 +52,7 @@
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-
+        cursor: pointer;
         &:hover {
             border-color: var(--border-color-hover);
         }
