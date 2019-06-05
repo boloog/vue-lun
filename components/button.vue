@@ -1,6 +1,9 @@
 <template>
-    <button class="v-button" :class="{ [`icon-${iconPosition}`]: true }">
-        <v-icon :name="icon" class="icon" v-if="icon"></v-icon>
+    <button class="v-button" :class="{ [`icon-${iconPosition}`]: true }"
+            @click="$emit('click')"
+    >
+        <v-icon :name="icon" class="icon" v-if="icon && !loading"></v-icon>
+        <v-icon name="loading" class="icon  loading" v-if="loading"></v-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -14,9 +17,13 @@
             iconPosition: { // left right
                 type: String,
                 default: 'left',
-                validator(value){
+                validator(value) {
                     return value === 'left' || value === 'right'
                 }
+            },
+            loading: {
+                type: Boolean,
+                default: false
             }
         }
         // 两种参数写法
@@ -25,6 +32,15 @@
 </script>
 
 <style lang="scss">
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
     .v-button {
         font-size: var(--font-size);
         height: var(--button-height);
@@ -36,6 +52,7 @@
         justify-content: center;
         align-items: center;
         vertical-align: middle;
+
         &:hover {
             border-color: var(--border-color-hover);
         }
@@ -53,7 +70,8 @@
         }
 
         > .icon {
-            order: 1; margin-right: 4px;
+            order: 1;
+            margin-right: 4px;
         }
 
         &.icon-right {
@@ -66,6 +84,10 @@
                 margin-right: 0;
                 margin-left: 4px;
             }
+        }
+
+        .loading {
+            animation: spin 1s infinite linear;
         }
     }
 </style>
